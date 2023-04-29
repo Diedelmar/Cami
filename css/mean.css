@@ -5,9 +5,20 @@
     box-sizing: border-box;
     font-family: 'Dancing Script', cursive;
     font-family: 'Indie Flower', cursive;
+  
+}
+.container__fluid{
+  background-color: rgb(122, 172, 187);
+  background-size: cover;
+}
+.navbar__brand{
+  color: rgb(250, 28, 209); 
+  font-weight: bolder; 
+  font-size: xx-large;
+  text-decoration: none;
 }
 .principal{
-    background-image: url(../foto/unas-para-boda.png);
+    background-image: url(../foto/depositphotos_43129767-stock-photo-manicure-and-pedicure.webp);
     background-size: cover;
    
 }
@@ -21,12 +32,13 @@
 .card {
     margin: 10px;
     padding: 15px;
-    borderRadius: 10px;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     width: 300px;
     text-align: center;
-   }
    
+}
+
 .card img {
     width: 250px;
     height: 250px;
@@ -39,29 +51,70 @@
     font-size: 24px;
     margin-bottom: 10px;
    }
+
+ @-webkit-keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+  @keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+  
+
+ 
    
-.card p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-   }
-   
-.card button {
-    background-color: #f9a6c1;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    borderRadius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-   }
-   
-.card button:hover {
-    background-color: #ff4689;
-   }
-   
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
     .card {
      width: 90%;
     }
    }  
+@media screen and (max-width: 480px){
+    .card{
+    width: 50px;
+    }
+}
