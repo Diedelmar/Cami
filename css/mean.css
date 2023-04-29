@@ -17,6 +17,7 @@
   font-size: xx-large;
   text-decoration: none;
 }
+
 .principal{
     background-image: url(../foto/depositphotos_43129767-stock-photo-manicure-and-pedicure.webp);
     background-size: cover;
@@ -110,11 +111,22 @@
    
 @media screen and (max-width: 768px){
     .card {
-     width: 90%;
+    display: grid;
+    grid-template-columns: repeat( 1 ,1fr);
+    flex-grow: 1 ; 
+    }
+    .card img{
+      width: 100%;
     }
    }  
 @media screen and (max-width: 480px){
     .card{
-    width: 50px;
+      display: grid;
+      grid-template-columns: repeat( 1 ,1fr);
+      flex-grow: 1 ; 
+    
+    }
+    .card img{
+      width: 100%;
     }
 }
