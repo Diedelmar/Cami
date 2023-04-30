@@ -21,6 +21,7 @@
 .principal{
     background-image: url(../foto/depositphotos_43129767-stock-photo-manicure-and-pedicure.webp);
     background-size: cover;
+    background-repeat: no-repeat;
    
 }
 .container {
@@ -51,7 +52,69 @@
 .card h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    text-decoration: double;
+    color: rgb(20, 20, 144);
    }
+   .pic-ctn {
+    width: 100vw;
+    height: 200px;
+  }
+  
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+  .pic {
+    width: 300px;
+    height: 200px;
+  }
+  
+  .pic-ctn {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    margin-top: 15vh;
+  }
+  
+  .pic-ctn > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display 10s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }  
+ 
 
  @-webkit-keyframes vibrate-1 {
     0% {
@@ -118,6 +181,10 @@
     .card img{
       width: 100%;
     }
+    .pic {
+      width: 300px;
+      height: 200px;
+    }
    }  
 @media screen and (max-width: 480px){
     .card{
@@ -128,5 +195,9 @@
     }
     .card img{
       width: 100%;
+    }
+    .pic {
+      width: 300px;
+      height: 200px;
     }
 }
