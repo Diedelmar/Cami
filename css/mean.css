@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  
    }
    
 .card {
@@ -48,35 +49,47 @@
     height: 200px;
   }
   .gallery{
-    background-color: #e6f7e9;
-    background-image: radial-gradient(#c845f7 1.1500000000000001px, #e6f7e9 1.1500000000000001px);
-    background-size: 23px 23px;
+    background-image: url(../foto/r10G1kqJf_1256x620.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  .gallery-container {
    
-  }
-  .container {
     display: flex;
-    width: 100%;
-    padding: 4% 2%;
+    flex-wrap: wrap;
+    justify-content: center;
     box-sizing: border-box;
-    height: 100vh;
   }
-.rounded{
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-            animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-.footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(155, 202, 211);
-  color: white;
-  text-align: center;
-}
+  
+  .gallery-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .gallery-item img {
+    border-radius: 50%;
+    width: 150px; /* Establece el tamaño que desees para las imágenes circulares */
+    height: 150px; /* Establece el tamaño que desees para las imágenes circulares */
+    margin: 5px; /* Ajusta el margen según tus preferencias */
+    object-fit: cover; /* Esto ayuda a que la imagen se ajuste al círculo correctamente sin estirarse */
+  }
+
+  footer {
+    min-height: 70px;
+    border-top: 1px solid rgba(50, 50, 50, 0.3);
+    width: 100%;
+    background-image: radial-gradient(circle at 30.56% 16.33%, #ffc07f 0, #fdc47a 3.57%, #f3c878 7.14%, #e8cc77 10.71%, #ddd077 14.29%, #d1d47a 17.86%, #c4d77f 21.43%, #b7da85 25%, #aadc8c 28.57%, #9cdf95 32.14%, #8de19f 35.71%, #7ee2aa 39.29%, #6de4b5 42.86%, #5ce4c1 46.43%, #48e5cd 50%, #31e5d9 53.57%, #0be5e5 57.14%, #00e5f0 60.71%, #00e4fb 64.29%, #00e3ff 67.86%, #00e1ff 71.43%, #23dfff 75%, #43ddff 78.57%, #5ddaff 82.14%, #74d7ff 85.71%, #8ad3ff 89.29%, #9fcfff 92.86%, #b2cbff 96.43%, #c4c7ff 100%);
+    position: fixed;
+    bottom: 0;      
+    text-align: center;       
+  }
+   .post-footer {
+    width: 950px;
+    margin: 0 auto;
+  }
 .fa-whatsapp{
   color:#fff;
  background:
@@ -90,108 +103,13 @@
   background-clip: text;
   -webkit-background-clip: text;
 }
- @keyframes display {
-    0% {
-      transform: translateX(200px);
-      opacity: 0;
-    }
-    10% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    20% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    30% {
-      transform: translateX(-200px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(-200px);
-      opacity: 0;
-    }
-  }
-   @-webkit-keyframes vibrate-1 {
-    0% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-              transform: translate(-2px, 2px);
-    }
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-              transform: translate(-2px, -2px);
-    }
-    60% {
-      -webkit-transform: translate(2px, 2px);
-              transform: translate(2px, 2px);
-    }
-    80% {
-      -webkit-transform: translate(2px, -2px);
-              transform: translate(2px, -2px);
-    }
-    100% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-  }
-  @keyframes vibrate-1 {
-    0% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-              transform: translate(-2px, 2px);
-    }
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-              transform: translate(-2px, -2px);
-    }
-    60% {
-      -webkit-transform: translate(2px, 2px);
-              transform: translate(2px, 2px);
-    }
-    80% {
-      -webkit-transform: translate(2px, -2px);
-              transform: translate(2px, -2px);
-    }
-    100% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-  }
-
- @-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
 
 
  
    
 @media screen and (max-width: 768px){
   .card {
-		width: 80%;
+		width: 90%;
 		margin: 10px auto;
 	}
 	.card img {
@@ -244,7 +162,7 @@
 }  
 @media screen and (max-width: 480px){
    .card {
-		width: 90%;
+   	width: 90%;
 		margin: 10px auto;
 		padding: 10px;
 	}
@@ -286,4 +204,4 @@
     text-align: justify;
     align-items: flex-end;
 }
-}
+} 
